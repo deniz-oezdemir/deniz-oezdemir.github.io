@@ -151,7 +151,7 @@ a {
 
 .dynamic-island .message.last {
 	position: absolute;
-	top: -98px;
+	top: -95px;
 	left: 40%;
 	transform: translateX(-50%);
 	transition: opacity 0.5s ease-in;
@@ -165,13 +165,13 @@ a {
 
 .message {
 	border-radius: 20px;
-	padding: 15px 16px;
+	padding: 4% 4%;
 	color: white;
 	background: rgb(0, 120, 254);
 	position: relative;
 	display: inline-block;
 	user-select: none;
-	width: 272px;
+	width: 270px;
 }
 
 .message.last:before {
