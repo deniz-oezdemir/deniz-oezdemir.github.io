@@ -1,10 +1,18 @@
 const pill = document.querySelector(".dynamic-island .pill");
 const dynamicIsland = document.querySelector(".dynamic-island");
-const photo = document.querySelector(".dynamic-island .photo img");
-const imessageIcon = document.querySelector(".dynamic-island .right img");
+const imessageIcon = document.getElementById("imessage-icon");
 const message = document.querySelector(".dynamic-island .message.last");
-const walletIcon = document.getElementById("wallet-icon");
+const worldclockIcon = document.getElementById("worldclock-icon");
+const breatheIcon = document.getElementById("breathe-icon");
 const socialIcons = document.querySelector(".dynamic-island .right .social-icons");
+const socialIconElements = document.querySelectorAll(".dynamic-island .right .social-icons img");
+
+function addClickEffect(icon) {
+	icon.classList.add("icon-clicked");
+	setTimeout(() => {
+		icon.classList.remove("icon-clicked");
+	}, 100);
+}
 
 pill.addEventListener("click", () => {
 	if (!dynamicIsland.classList.contains("active")) {
@@ -13,7 +21,8 @@ pill.addEventListener("click", () => {
 	}
 });
 
-photo.addEventListener("click", () => {
+breatheIcon.addEventListener("click", () => {
+	addClickEffect(breatheIcon);
 	if (dynamicIsland.classList.contains("active")) {
 		dynamicIsland.classList.remove("active");
 	} else {
@@ -28,9 +37,17 @@ photo.addEventListener("click", () => {
 });
 
 imessageIcon.addEventListener("click", () => {
+	addClickEffect(imessageIcon);
 	message.classList.toggle("hidden");
 });
 
-walletIcon.addEventListener("click", () => {
+worldclockIcon.addEventListener("click", () => {
+	addClickEffect(worldclockIcon);
 	socialIcons.classList.toggle("visible");
+});
+
+socialIconElements.forEach(icon => {
+	icon.addEventListener("click", () => {
+		addClickEffect(icon);
+	});
 });

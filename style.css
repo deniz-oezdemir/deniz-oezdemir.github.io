@@ -85,8 +85,6 @@ a {
 
 .dynamic-island .photo {
 	height: 50px;
-	cursor: pointer;
-	pointer-events: auto;
 }
 
 .dynamic-island .photo img {
@@ -111,8 +109,6 @@ a {
 .dynamic-island .right img {
 	cursor: pointer;
 	image-rendering: optimizeQuality;
-	/* image-rendering: -webkit-optimize-contrast;
-	image-rendering: crisp-edges; */
 }
 
 .dynamic-island.active .right {
@@ -150,6 +146,11 @@ a {
 	opacity: 1;
 	pointer-events: auto;
 	transition: opacity 0.5s ease-in;
+}
+
+.icon-clicked {
+	filter: brightness(0.5);
+	transition: filter 0.1s ease-out;
 }
 
 .dynamic-island .message.last {
