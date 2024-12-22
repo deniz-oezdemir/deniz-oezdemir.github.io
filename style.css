@@ -110,6 +110,8 @@ a {
 
 .dynamic-island .right img {
 	cursor: pointer;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: crisp-edges;
 }
 
 .dynamic-island.active .right {
