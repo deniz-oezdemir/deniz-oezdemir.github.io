@@ -17,7 +17,6 @@ function addClickEffect(icon) {
 pill.addEventListener("click", () => {
 	if (!dynamicIsland.classList.contains("active")) {
 		dynamicIsland.classList.add("active");
-		photo.classList.add("visible");
 	}
 });
 
